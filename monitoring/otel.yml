@@ -1,0 +1,31 @@
+_format_version: "3.0"
+plugins:
+- config:
+    batch_flush_delay: null
+    batch_span_count: null
+    connect_timeout: 1000
+    endpoint: http://otel-collector.default:4318/v1/traces
+    header_type: preserve
+    headers: []
+    http_response_header_for_traceid: null
+    queue:
+      initial_retry_delay: 0.01
+      max_batch_size: 1
+      max_bytes: null
+      max_coalescing_delay: 1
+      max_entries: 10000
+      max_retry_delay: 60
+      max_retry_time: 60
+    read_timeout: 5000
+    resource_attributes: []
+    sampling_rate: null
+    send_timeout: 5000
+  enabled: false
+  name: opentelemetry
+  protocols:
+  - grpc
+  - grpcs
+  - http
+  - https
+  tags:
+  - otel
